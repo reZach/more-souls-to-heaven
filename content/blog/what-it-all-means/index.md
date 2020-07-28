@@ -1,9 +1,11 @@
 ---
 title: What it all means
 date: "2020-07-27"
-description: blah
+description: Powers at be
 ---
 
-https://www.gatsbyjs.org/tutorial/blog-netlify-cms-tutorial/#benefits-of-netlify-cms-github-and-netlify-workflow
+It can all be a bit hard, we seem like we are the small fry in life.
 
-What does it all mean? What is going on?
+Do we feel dominated, not feel we are in control? It comes from all directions, doesn't it? It doesn't feel like we have control over the bigger players in the game.
+
+I was thinking of building products, envisioning what type of applications would be good market-fit and how it could help others.
