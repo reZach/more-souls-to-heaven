@@ -27,13 +27,13 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-5954b18d3fd7c0f176d5.js"
+    "url": "webpack-runtime-f9428447bcf231dabd05.js"
   },
   {
     "url": "framework-a7bb16c5c6afeed647b2.js"
   },
   {
-    "url": "styles.cd3871b1938182bc72d1.css"
+    "url": "styles.1025963f4f2ec7abbad4.css"
   },
   {
     "url": "styles-24f8f5af0e19035407c6.js"
@@ -42,29 +42,21 @@ self.__precacheManifest = [
     "url": "532a2f07-a09818a88319b8b503ee.js"
   },
   {
-    "url": "app-2a3ed84f883d094e974b.js"
+    "url": "app-70612e0ec93ad73624cc.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "01bcacf287f7353df38506782b25c3cf"
+    "revision": "1f2ee36232ebdb4a4f77b4187c3542ca"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-e5cb9e0c77a823b86dc2.js"
-  },
-  {
-    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "f6081b83111aea4128c98944b7fafccc"
-  },
-  {
-    "url": "page-data/app-data.json",
-    "revision": "0519fd389c4f29a27f982025af1304f7"
   },
   {
     "url": "polyfill-6fa501141d6fe72b85ff.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "6c89bf31ee7bbdcf2eeda9b58bb9dd76"
+    "revision": "27cc4f8d0a85bf9f37be429d7a55e230"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -152,12 +144,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/more-souls-to-heaven`), ``)
+  pathname = pathname.replace(new RegExp(`^`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/more-souls-to-heaven/app-2a3ed84f883d094e974b.js`))) {
+  if (!resources || !(await caches.match(`/app-70612e0ec93ad73624cc.js`))) {
     return await fetch(event.request)
   }
 
@@ -170,7 +162,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/more-souls-to-heaven/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
