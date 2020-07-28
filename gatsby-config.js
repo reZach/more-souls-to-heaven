@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/more-souls-to-heaven",
   siteMetadata: {
     // edit below
     title: `More Souls to Heaven`,
