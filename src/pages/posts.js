@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
 
-class Blog extends React.Component {
+class Posts extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -29,7 +29,7 @@ class Blog extends React.Component {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`/blog${node.fields.slug}`}
+                    to={`/posts${node.fields.slug}`}
                   >
                     {title}
                   </Link>
@@ -52,7 +52,7 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog
+export default Posts
 
 export const pageQuery = graphql`
   query {

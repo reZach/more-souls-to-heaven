@@ -26,7 +26,7 @@ function Bio() {
               style={{
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
-                minWidth: 50,
+                minWidth: 100,
                 borderRadius: `100%`,
               }}
               imgStyle={{
@@ -34,12 +34,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>, a framework built upon the
-              React library.
-              {` `}
-              {typeof social !== "undefined" ? <a href={`https://twitter.com/${social.twitter}`}>
-                Follow me on Twitter
-              </a> : null}
+              We know that all things work for good for those who love God, who are called according to his purpose. - Romans 8:28
             </p>
           </Container>
         )
@@ -50,9 +45,9 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/gatsby-icon.png/" }) {
+    avatar: file(absolutePath: { regex: "/fish.png/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 100, height: 50) {
           ...GatsbyImageSharpFixed
         }
       }
