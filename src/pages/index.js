@@ -17,12 +17,9 @@ class IndexPage extends React.Component {
         />
         <img style={{ margin: 0, width: "150px" }} src="./cross.svg" alt="Jesus on the cross" />
         <h1>
-          Hey people{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>
+          Welcome!
         </h1>
-        <p>This is a blog about God, faith, technology and life - and how it can all intersect.</p>
+        <p>This is a blog about God, faith, technology, life and becoming a saint - and how it can all intersect.</p>
         <Link to="/posts/">
           <Button marginTop="35px">Go to Blog</Button>
         </Link>
